@@ -1,12 +1,11 @@
 .header {
     border-bottom: 1px solid $--color-border-heade;
-}
 
-.header__container {
+&__container {
     display: flex;
 }
 
-.header__logo {
+&__logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -18,9 +17,9 @@
     padding-bottom: 24px;
 }
 
-.header__logoweb {
+&__logoweb {
     color: $--logo-link-color;
-}
+}}
 
 /* NAVIGATION */
 /* Portfolio */
@@ -30,10 +29,6 @@
 }
 
 /*  полоска */
-.navigation__link {
-    position: relative;
-    padding: 32px 0;
-}
 
 .curent::after {
     content: '';
@@ -45,71 +40,59 @@
     background-color:$--logo-link-color;
     border-radius: 2px;
 }
+.navigation__link.curent {
+    color: $--logo-link-color;
+}
 
 /* полоска */
-.navigation__link {
+
+
+
+.navigation {
+@extend %centeredFlex;
+    margin-left: 93px;
+
+&__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $--primary-text-color;
+    position: relative;
+    padding: 32px 0;
     text-decoration: none;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation .navigation__link:hover,
-.navigation .navigation__link:focus {
-    color: $--logo-link-color;
-}
-
-.navigation {
-@extend %centeredFlex;
-    margin-left: 93px;
-}
-
-.navigation__link.curent {
-    color: $--logo-link-color;
-}
-
-.navigation__item:not(:first-child) {
+&__item:not(:first-child) {
     margin-left: 50px;
 }
+& &__link:hover,
+& &__link:focus {
+    color: $--logo-link-color;
+}}
 
 /* tel+adress */
 .ligament {
     @extend %centeredFlex;
     margin-left: auto;
-}
 
-.ligament .ligament__link {
+
+&__link {
+    @extend %centeredFlex;
+        padding-top: 32px;
+        padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $--secondary-text;  
     text-decoration: none;
+    @extend%transit;
 }
 
-.ligament__link {
-    @extend %centeredFlex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-@extend%transit;
-}
-
-.ligament__link:hover,
-.ligament__link:focus {
-    color: $--logo-link-color;
-}
-
-.ligament__link:hover svg,
-.ligament__link:focus svg {
-    fill: $--logo-link-color;
-}
-
-/* icon navigation */
-.ligament__icon {
+&__icon {
     display: block;
     height: 20px;
     width: 16px;
@@ -117,10 +100,22 @@
     fill: $--hover-icon;
 }
 
-.ligament__icon--smartfone {
+&__icon--smartfone {
     display: block;
     height: 16px;
     width: 12px;
     margin-right: 10px;
     fill: $--hover-icon;
 }
+
+&__link:hover,
+&__link:focus {
+    color: $--logo-link-color;
+}
+
+&__link:hover svg,
+&__link:focus svg {
+    fill: $--logo-link-color;
+}
+}
+/* icon navigation */

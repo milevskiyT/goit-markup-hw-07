@@ -34,13 +34,11 @@ body {
 .header {
   border-bottom: 1px solid rgb(236, 236, 236);
 }
-
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 .header__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -52,7 +50,6 @@ body {
   padding-top: 25px;
   padding-bottom: 24px;
 }
-
 .header__logoweb {
   color: rgb(33, 150, 243);
 }
@@ -64,11 +61,6 @@ body {
 }
 
 /*  полоска */
-.navigation__link {
-  position: relative;
-  padding: 32px 0;
-}
-
 .curent::after {
   content: "";
   position: absolute;
@@ -80,43 +72,42 @@ body {
   border-radius: 2px;
 }
 
+.navigation__link.curent {
+  color: rgb(33, 150, 243);
+}
+
 /* полоска */
+.navigation {
+  margin-left: 93px;
+}
 .navigation__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: rgb(33, 33, 33);
+  position: relative;
+  padding: 32px 0;
   text-decoration: none;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.navigation .navigation__link:hover,
-.navigation .navigation__link:focus {
-  color: rgb(33, 150, 243);
-}
-
-.navigation {
-  margin-left: 93px;
-}
-
-.navigation__link.curent {
-  color: rgb(33, 150, 243);
-}
-
 .navigation__item:not(:first-child) {
   margin-left: 50px;
+}
+.navigation .navigation__link:hover, .navigation .navigation__link:focus {
+  color: rgb(33, 150, 243);
 }
 
 /* tel+adress */
 .ligament {
   margin-left: auto;
 }
-
-.ligament .ligament__link {
+.ligament__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -124,23 +115,6 @@ body {
   color: rgb(117, 117, 117);
   text-decoration: none;
 }
-
-.ligament__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.ligament__link:hover,
-.ligament__link:focus {
-  color: rgb(33, 150, 243);
-}
-
-.ligament__link:hover svg,
-.ligament__link:focus svg {
-  fill: rgb(33, 150, 243);
-}
-
-/* icon navigation */
 .ligament__icon {
   display: block;
   height: 20px;
@@ -148,7 +122,6 @@ body {
   margin-right: 10px;
   fill: rgb(117, 117, 117);
 }
-
 .ligament__icon--smartfone {
   display: block;
   height: 16px;
@@ -156,7 +129,14 @@ body {
   margin-right: 10px;
   fill: rgb(117, 117, 117);
 }
+.ligament__link:hover, .ligament__link:focus {
+  color: rgb(33, 150, 243);
+}
+.ligament__link:hover svg, .ligament__link:focus svg {
+  fill: rgb(33, 150, 243);
+}
 
+/* icon navigation */
 /* hero section */
 .hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Img.jpg);
