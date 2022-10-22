@@ -1,3 +1,16 @@
+    @mixin mobile {
+        @media screen and (min-width:480px) {}
+    }
+
+    @mixin tablet {
+        @media screen and (min-width:768px) {}
+    }
+
+
+
+
+
+@include desktop{
 .header {
     border-bottom: 1px solid $--color-border-heade;
 
@@ -117,5 +130,5 @@
 &__link:focus svg {
     fill: $--logo-link-color;
 }
-}
+}}
 /* icon navigation */
